@@ -4,6 +4,6 @@ cmake_minimum_required(VERSION 3.10)
 project(sample)
 find_package(PkgConfig REQUIRED)
 find_package(OpenCV REQUIRED)
-find_package(Libcamera REQUIRED)
+pkg_check_modules(LIBCAMERA REQUIRED libcamera)
 # add the executable
 add_executable(Hello Hello.cxx)
